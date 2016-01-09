@@ -1,0 +1,147 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/site.master" AutoEventWireup="true" CodeFile="site-support-sub.master.cs" Inherits="site_support_sub" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="container">
+        <div id="site">
+            <a id="A1" href="~/" runat="server" class="home"><span class="fa fa-home"></span></a>&raquo;
+            <asp:contentplaceholder id="cphSite" runat="server"></asp:contentplaceholder>
+        </div>
+        <div class="wrapper-main">
+            <div id="colAright">
+
+                <h4 class="title-d">Các tư vấn khác</h4>
+
+                <div id="supprortAside" class="support-aside row tb-last" data-num="4">
+                    <div class="col-xs-12 element-item">
+
+                        <div class="box-sup">
+                            <a href="#" class="sup-img">
+                                <img src="assets/images/img-1.jpg" alt="" />
+                            </a>
+                            <h3 class="sup-name">
+                                <a href="#">Cách phân biệt Collagen thật và giả</a>
+                            </h3>
+                            <div class="desciption">
+                                Hiện nay trên thị trường có rất nhiều Collagen khác nhau phục vụ cho nhu cầu làm đẹp của chị em. Tuy nhiên Thật...
+                            </div>
+                            <div class="more-details">
+                                <a href="#">Xem chi tiết<span class="fa fa-caret-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 element-item">
+
+                        <div class="box-sup">
+                            <a href="#" class="sup-img">
+                                <img src="assets/images/img-1.jpg" alt="" />
+                            </a>
+                            <h3 class="sup-name">
+                                <a href="#">Cách phân biệt Collagen thật và giả</a>
+                            </h3>
+                            <div class="desciption">
+                                Hiện nay trên thị trường có rất nhiều Collagen khác nhau phục vụ cho nhu cầu làm đẹp của chị em. Tuy nhiên Thật...
+                            </div>
+                            <div class="more-details">
+                                <a href="#">Xem chi tiết<span class="fa fa-caret-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 element-item">
+
+                        <div class="box-sup">
+                            <a href="#" class="sup-img">
+                                <img src="assets/images/img-1.jpg" alt="" />
+                            </a>
+                            <h3 class="sup-name">
+                                <a href="#">Cách phân biệt Collagen thật và giả</a>
+                            </h3>
+                            <div class="desciption">
+                                Hiện nay trên thị trường có rất nhiều Collagen khác nhau phục vụ cho nhu cầu làm đẹp của chị em. Tuy nhiên Thật...
+                            </div>
+                            <div class="more-details">
+                                <a href="#">Xem chi tiết<span class="fa fa-caret-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 element-item">
+
+                        <div class="box-sup">
+                            <a href="#" class="sup-img">
+                                <img src="assets/images/img-1.jpg" alt="" />
+                            </a>
+                            <h3 class="sup-name">
+                                <a href="#">Cách phân biệt Collagen thật và giả</a>
+                            </h3>
+                            <div class="desciption">
+                                Hiện nay trên thị trường có rất nhiều Collagen khác nhau phục vụ cho nhu cầu làm đẹp của chị em. Tuy nhiên Thật...
+                            </div>
+                            <div class="more-details">
+                                <a href="#">Xem chi tiết<span class="fa fa-caret-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 element-item">
+
+                        <div class="box-sup">
+                            <a href="#" class="sup-img">
+                                <img src="assets/images/img-1.jpg" alt="" />
+                            </a>
+                            <h3 class="sup-name">
+                                <a href="#">Cách phân biệt Collagen thật và giả</a>
+                            </h3>
+                            <div class="desciption">
+                                Hiện nay trên thị trường có rất nhiều Collagen khác nhau phục vụ cho nhu cầu làm đẹp của chị em. Tuy nhiên Thật...
+                            </div>
+                            <div class="more-details">
+                                <a href="#">Xem chi tiết<span class="fa fa-caret-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 element-item">
+
+                        <div class="box-sup">
+                            <a href="#" class="sup-img">
+                                <img src="assets/images/img-1.jpg" alt="" />
+                            </a>
+                            <h3 class="sup-name">
+                                <a href="#">Cách phân biệt Collagen thật và giả</a>
+                            </h3>
+                            <div class="desciption">
+                                Hiện nay trên thị trường có rất nhiều Collagen khác nhau phục vụ cho nhu cầu làm đẹp của chị em. Tuy nhiên Thật...
+                            </div>
+                            <div class="more-details">
+                                <a href="#">Xem chi tiết<span class="fa fa-caret-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="colMain" class="pa-right">
+                <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                </asp:contentplaceholder>
+                <div id="mobileAside">
+
+                    <h4 class="title-d title-linet">Các tư vấn khác</h4>
+
+                    <div id="supportMobile" class="support-tb wrap-support row tb-last" data-num="4">
+                    </div>
+                </div>
+            </div>
+            <div class="clr"></div>
+        </div>
+
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphMenuMobile" runat="Server">
+    <asp:contentplaceholder id="cphMenuMobile" runat="server">
+    </asp:contentplaceholder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cphPopup" runat="Server">
+    <asp:contentplaceholder id="cphPopup" runat="server">
+    </asp:contentplaceholder>
+</asp:Content>
+

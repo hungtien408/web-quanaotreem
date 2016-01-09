@@ -1,0 +1,371 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="site.master.cs" Inherits="site" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,vietnamese'
+        rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300&subset=latin,vietnamese'
+        rel='stylesheet' type='text/css' />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+    <link href="assets/styles/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/styles/uniform-base.css" rel="stylesheet" type="text/css" />
+    <link href="assets/styles/nivo-slider.css" rel="stylesheet" type="text/css" />
+    <link href="assets/styles/cloud-zoom.css" rel="stylesheet" />
+    <link href="assets/styles/jcarousel.responsive.css" rel="stylesheet" />
+    <link href="assets/styles/jcarousel.connected-carousels.css" rel="stylesheet" />
+    <link href="assets/styles/jquery.bxslider.css" rel="stylesheet" />
+    <link href="assets/styles/site.css" rel="stylesheet" type="text/css" />
+    <link href="assets/styles/site-repond.css" rel="stylesheet" type="text/css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <style type="text/css">
+            .corner
+            { 
+                position: relative; behavior: url(PIE.htc); 
+            }
+            .fullbox-img
+            {
+	            -ms-behavior: url(backgroundsize.min.htc);
+	            behavior: url(backgroundsize.min.htc);
+            }
+        </style>
+        <link href="assets/styles/ie-78.css" rel="stylesheet" />
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js" type="text/javascript"></script>
+	    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js" type="text/javascript"></script>
+    <![endif]-->
+    <!--[if lte IE 7]>
+        <link href="assets/styles/ie7.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <script src="assets/js/jquery.js" type="text/javascript"></script>
+    <script src="assets/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.mb.browser.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.touchSwipe.min.js"></script>
+    <script src="assets/js/jwplayer.js" type="text/javascript"></script>
+    <script type="text/javascript">        jwplayer.key = "5qMQ1qMprX8KZ79H695ZPnH4X4zDHiI0rCXt1g==";</script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!--active menu-->
+    <script type="text/javascript">
+        function changeActiveMenu(page) {
+            $('#menu li').removeClass("active");
+            $('#menu li a[href*="' + page + '"]').parent("li").addClass("active");
+        }
+        function changeSubActiveMenu(page) {
+            $('#menu li li').removeClass("active");
+            $('#menu li li a[href$="' + page + '"]').closest("li").addClass("active");
+            $('.footer-list li').removeClass("active");
+            $('.footer-list li a[href$="' + page + '"]').closest("li").addClass("active");
+            $('menunav-product li').removeClass("active");
+            $('menunav-product li a[href$="' + page + '"]').closest("li").addClass("active");
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
+    <div id="wrapper">
+        <div id="wrapper-in">
+            <!--header-->
+            <div id="header">
+                <div class="wrapper-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-5 desktop-showhide">
+                                <div class="header-link link-menu bor-left">
+                                    <a href="dat-hang-san-xuat.aspx">Đặt hàng Sản Xuất</a><a href="#">Dịch vụ Gia công</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-7 text-right">
+                                <div class="header-link bor-right">
+                                    <a href="ho-tro-khach-hang.aspx" class="desktop-showhide">Về chúng tôi</a><a href="lien-he.aspx"
+                                        class="desktop-showhide">Liên hệ</a><a href="#"><span class="fa fa-heart"></span>Yêu
+                                            thích</a><a class='<%= Session["IsLogin"] !=null ? "hidden" : "" %>' href="dang-ky.aspx">Đăng
+                                                ký</a><a class='<%= Session["IsLogin"] ==null ? "hidden" : "" %>' href="thong-tin-tai-khoan.aspx"><%= Session["UserName"] %></a><a
+                                                    class='<%= Session["IsLogin"] !=null ? "hidden" : "" %>' href="Login.aspx">Đăng
+                                                    nhập</a> 
+                                    <asp:LinkButton ID="lnkLogout" OnClick="lnkLogout_Click" runat="server">Thoát</asp:LinkButton>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-center">
+                        <div class="container">
+                            <div class="logo">
+                                <a href="~/" runat="server">
+                                    <img src="assets/images/logo.png" alt="logo" /></a></div>
+                            <div class="header-right desktop-showhide">
+                                <div class="hotline">
+                                    Hỗ trợ 24/7 - Mr. Hiền<strong><img class="img-responsive" src="assets/images/hotline.png"
+                                        alt="0908 56 36 44 " /></strong></div>
+                                <ul class="list-na">
+                                    <li><a href="mau-ma-phong-phu.aspx" class="corner bga-1">Mẫu Mã<br />
+                                        Phong Phú</a></li>
+                                    <li><a href="chat-lieu-da-dang.aspx" class="corner bga-2">Chất Liệu<br />
+                                        Đa Dạng</a></li>
+                                    <li><a href="gia-ca-canh-tranh.aspx" class="corner bga-3">Giá Cả<br />
+                                        Cạnh Tranh</a></li>
+                                    <li><a href="dong-hang-toan-quoc.aspx" class="corner bga-4">Đóng Hàng<br />
+                                        Toàn Quốc</a></li>
+                                </ul>
+                            </div>
+                            <div class="clr">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-menu">
+                    <div class="container">
+                        <a class="panel-a menu-mo mobile-992" href="#menumobile" data-position="true" data-type="false">
+                            <span class="fa fa-reorder"></span>menu</a>
+                        <asp:ListView ID="lstProductCategory" runat="server" DataSourceID="odsProductCategory"
+                            EnableModelValidation="True">
+                            <ItemTemplate>
+                                <li><a href='<%# progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ProductCategoryID") + ".aspx" %>'>
+                                    <%# Eval("ProductCategoryName") %>
+                                </a></li>
+                            </ItemTemplate>
+                            <LayoutTemplate>
+                                <ul id="menu" class="desktop-992">
+                                    <li runat="server" id="itemPlaceholder"></li>
+                                    <li><a href="hang-hot-thi-truong.aspx">Hàng hot thị trường</a></li>
+                                </ul>
+                            </LayoutTemplate>
+                        </asp:ListView>
+                        <asp:ObjectDataSource ID="odsProductCategory" runat="server" SelectMethod="ProductCategorySelectAll"
+                            TypeName="TLLib.ProductCategory">
+                            <SelectParameters>
+                                <asp:Parameter DefaultValue="0" Name="parentID" Type="Int32" />
+                                <asp:Parameter DefaultValue="1" Name="increaseLevelCount" Type="Int32" />
+                                <asp:Parameter Name="IsShowOnMenu" Type="String" />
+                                <asp:Parameter Name="IsShowOnHomePage" Type="String" />
+                            </SelectParameters>
+                        </asp:ObjectDataSource>
+                        <a href="gio-hang.aspx" class="link-cart"><span class="iconcart fa fa-shopping-cart">
+                        </span>[ <strong><asp:Label ID="lblSummary"
+                            runat="server" Text="0"></asp:Label></strong> ]</a>
+                        <div class="search-form fa fa-search">
+                            <a href="#search" class="search-link"></a>
+                            <asp:Button ID="btnSearch" CssClass="search-btn" runat="server" Text="" OnClick="btnSearch_Click" />
+                            <div id="search" class="search-input">
+                                <asp:TextBox ID="txtSearch" CssClass="search-text" runat="server"></asp:TextBox>
+                                <asp:TextBoxWatermarkExtender ID="txtSearch_WatermarkExtender" runat="server" Enabled="True"
+                                    WatermarkText="Tìm kiếm" TargetControlID="txtSearch">
+                                </asp:TextBoxWatermarkExtender>
+                            </div>
+                        </div>
+                        <div class="clr">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end header-->
+            <hr />
+            <!--main-->
+            <div id="mainContent">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <!--end main-->
+            <hr />
+            <!--footer-->
+            <div id="footer">
+                <div class="container">
+                    <div class="wrap-footer">
+                        <div id="footeriso" class="row">
+                            <div class="col-lg-3 col-md-4 col-xs-6 element-item">
+                                <div class="footer-col">
+                                    <h3 class="title-f">
+                                        Hỗ trợ khách hàng</h3>
+                                    <ul class="footer-list">
+                                        <li><a href="#"><span class="icon-a">
+                                            <img src="assets/images/icon-f-1.png" />
+                                        </span>Câu hỏi thường gặp </a></li>
+                                        <li><a href="#"><span class="icon-a">
+                                            <img src="assets/images/icon-f-2.png" />
+                                        </span>Các bước đặt hàng </a></li>
+                                        <li><a href="#"><span class="icon-a">
+                                            <img src="assets/images/icon-f-3.png" />
+                                        </span>Chính sách giao hàng </a></li>
+                                        <li><a href="#"><span class="icon-a">
+                                            <img src="assets/images/icon-f-4.png" />
+                                        </span>Quy định đổi trả </a></li>
+                                        <li><a href="ho-tro-khach-hang.aspx"><span class="icon-a">
+                                            <img src="assets/images/icon-f-5.png" />
+                                        </span>Thông tin về chúng tôi </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6 element-item">
+                                <div class="footer-col">
+                                    <h3 class="title-f">
+                                        Đăng ký nhận email</h3>
+                                    <div id="emailbox">
+                                        <h4>
+                                            hãy đăng ký ngay</h4>
+                                        <p>
+                                            Để nhận bản tin về các bộ sưu tập mới và các chương trình khuyến mãi hấp dẫn.</p>
+                                        <div class="wrap-email">
+                                            <div class="email-right">
+                                                <asp:Button ID="btnNewLetter" CssClass="email-btn" ValidationGroup="EmailNewLetter"
+                                                    runat="server" Text="Đăng ký ngay" OnClick="btnNewLetter_Click" />
+                                            </div>
+                                            <div class="email-left">
+                                                <asp:TextBox ID="txtNewLetter" CssClass="email-text" runat="server" placeholder="Nhập e-mail của bạn"></asp:TextBox>
+                                                <asp:RegularExpressionValidator CssClass="lb-error" ID="RegularExpressionValidator1"
+                                                    runat="server" ValidationGroup="EmailNewLetter" ControlToValidate="txtNewLetter"
+                                                    ErrorMessage="Sai định dạng email!" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                                                    Display="Dynamic" ForeColor="Red"></asp:RegularExpressionValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtNewLetter"
+                                                    ValidationGroup="EmailNewLetter" runat="server" ErrorMessage="Chưa nhập Email!"
+                                                    Display="Dynamic"></asp:RequiredFieldValidator>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6 element-item">
+                                <div class="footer-col">
+                                    <h3 class="title-f">
+                                        Thông tin cửa hàng</h3>
+                                    <ul class="list-address">
+                                        <li>
+                                            <p>
+                                                <span class="iconl fa fa-map-marker"></span>673 Lê Hồng Phong, Phường 10, Quận 10,
+                                                TPHCM</p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <span class="iconl fa fa-phone-square"></span><strong>0908 563 644</strong> (Mr.Hiền)</p>
+                                            <p>
+                                                <span class="iconl fa fa-phone-square"></span><strong>0902 717 575</strong> (Ms.
+                                                Điêp )</p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <span class="iconl fa fa-facebook-square"></span><a href="http://www.facebook.com/shopnguyenhien">
+                                                    www.facebook.com/shopnguyenhien</a></p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <span class="iconl fa fa-link"></span><a href="hhtp://www.nguyenhienshop.com">www.nguyenhienshop.com</a></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-12 col-xs-6 element-item">
+                                <div class="footer-col">
+                                    <h3 class="title-f">
+                                        Facebook</h3>
+                                    <div class="facebookbox">
+                                        <img class="img-responsive" src="assets/images/facebox.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end footer-->
+        </div>
+        <!--menumobile-->
+        <div id="menumobile" class="mobile-panel mobilep-left">
+            <div class="close-menu">
+                <a href="#menumobile" class="glyphicon glyphicon-remove-circle">close</a></div>
+            <div class="menu-in">
+                <div class="menu-mobile">
+                    <div class="logo">
+                        <a href="~/" runat="server">
+                            <img src="assets/images/logo.png" alt="logo" /></a></div>
+                    <asp:ListView ID="lstProductCategory2" runat="server" DataSourceID="odsProductCategory2"
+                        EnableModelValidation="True">
+                        <ItemTemplate>
+                            <li><a href='<%# progressTitle(Eval("ProductCategoryName")) + "-pci-" + Eval("ProductCategoryID") + ".aspx" %>'>
+                                <%# Eval("ProductCategoryName") %>
+                                <span class="iconar fa fa-chevron-circle-right"></span></a></li>
+                        </ItemTemplate>
+                        <LayoutTemplate>
+                            <ul id="menuMobile" class="menu-nav">
+                                <li runat="server" id="itemPlaceholder"></li>
+                                <li><a href="hang-hot-thi-truong.aspx">Hàng hot thị trường<span class="iconar fa fa-chevron-circle-right"></span></a></li>
+                            </ul>
+                        </LayoutTemplate>
+                    </asp:ListView>
+                    <asp:ObjectDataSource ID="odsProductCategory2" runat="server" SelectMethod="ProductCategorySelectAll"
+                        TypeName="TLLib.ProductCategory">
+                        <SelectParameters>
+                            <asp:Parameter DefaultValue="0" Name="parentID" Type="Int32" />
+                            <asp:Parameter DefaultValue="1" Name="increaseLevelCount" Type="Int32" />
+                            <asp:Parameter Name="IsShowOnMenu" Type="String" />
+                            <asp:Parameter Name="IsShowOnHomePage" Type="String" />
+                        </SelectParameters>
+                    </asp:ObjectDataSource>
+                    <ul class="menu-link mobile-showhide">
+                        <li><a href="dat-hang-san-xuat.aspx" class="text-uppercase"><span class="fa fa-chevron-right">
+                        </span>Đặt hàng Sản Xuất</a></li>
+                        <li><a href="dich-vu-gia-cong.aspx" class="text-uppercase"><span class="fa fa-chevron-right">
+                        </span>Dịch vụ Gia công</a></li>
+                        <li><a href="ho-tro-khach-hang.aspx" class="text-capitalize"><span class="fa fa-chevron-right">
+                        </span>Về chúng tôi</a></li>
+                        <li><a href="lien-he.aspx" class="text-capitalize"><span class="fa fa-chevron-right">
+                        </span>Liên hệ</a></li>
+                    </ul>
+                    <ul class="menu-link mobile-showhide">
+                        <li><a href="mau-ma-phong-phu.aspx" class="text-uppercase"><span class="fa fa-chevron-right">
+                        </span>Mẫu Mã Phong Phú</a></li>
+                        <li><a href="chat-lieu-da-dang.aspx" class="text-uppercase"><span class="fa fa-chevron-right">
+                        </span>Chất Liệu Đa Dạng</a></li>
+                        <li><a href="gia-ca-canh-tranh.aspx" class="text-uppercase"><span class="fa fa-chevron-right">
+                        </span>Giá Cả Cạnh Tranh</a></li>
+                        <li><a href="dong-hang-toan-quoc.aspx" class="text-uppercase"><span class="fa fa-chevron-right">
+                        </span>Đóng Hàng Toàn Quốc</a></li>
+                    </ul>
+                    <div class="hotline">
+                        Hỗ trợ 24/7 - Mr. Hiền<strong><img class="img-responsive" src="assets/images/hotline.png"
+                            alt="0908 56 36 44 " /></strong></div>
+                </div>
+            </div>
+        </div>
+        <!--menumobile-->
+        <asp:ContentPlaceHolder ID="cphMenuMobile" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <asp:ContentPlaceHolder ID="cphPopup" runat="server">
+    </asp:ContentPlaceHolder>
+    <div id="sroltop">
+        <a class="corner" href="javascript:void(0);"><span class="glyphicon glyphicon-chevron-up">
+        </span></a>
+    </div>
+    <!--active-->
+    <div id="runScript" runat="server">
+    </div>
+    <script src="assets/js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.uniform.min.js" type="text/javascript"></script>
+    <script src="assets/js/isotope.pkgd.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.panel.mobile.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.textheight.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.bgbox.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.bxslider.min.js"></script>
+    <script src="assets/js/jquery.tabs.reponsive.js"></script>
+    <script src="assets/js/cloud-zoom.js"></script>
+    <script src="assets/js/jquery.jcarousel.min.js"></script>
+    <script src="assets/js/jquery.main.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+        });
+    </script>
+    </form>
+</body>
+</html>

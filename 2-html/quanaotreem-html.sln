@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "quanaotreem-html", "quanaotreem-html\", "{32E25F1F-5EE0-4606-BAE9-C6347DE087FD}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		Debug.AspNetCompiler.VirtualPath = "/quanaotreem-html"
+		Debug.AspNetCompiler.PhysicalPath = "quanaotreem-html\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\quanaotreem-html\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/quanaotreem-html"
+		Release.AspNetCompiler.PhysicalPath = "quanaotreem-html\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\quanaotreem-html\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "63466"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32E25F1F-5EE0-4606-BAE9-C6347DE087FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32E25F1F-5EE0-4606-BAE9-C6347DE087FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

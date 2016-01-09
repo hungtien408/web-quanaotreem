@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/site.master" AutoEventWireup="true" CodeFile="site-right.master.cs" Inherits="site_right" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="container">
+        <div id="site">
+            <a id="A1" href="~/" runat="server" class="home"><span class="fa fa-home"></span></a>&raquo;
+            <asp:ContentPlaceHolder ID="cphSite" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <div class="wrapper-main">
+            <div id="colAright">
+                
+                        <h4 class="title-c">Sản phẩm cùng loại</h4>
+                <div id="sliderList">
+                    <ul class="product-list">
+                                <li>
+                                    <div class="product-box text-center">
+                                        <a href="san-pham-chi-tiet.aspx" class="product-img corner">
+                                            <span class="fullbox-img boximg-in"><img class="hideo" src="assets/images/product-img-1.jpg" alt="" /></span>
+                                            </a>
+                                        <div class="product-content">
+                                            <h4 class="product-name"><a href="san-pham-chi-tiet.aspx">Bộ bé gái 8 ri</a></h4>
+                                            <div class="pro-code">Mã: DBBT01</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="product-box text-center">
+                                        <a href="san-pham-chi-tiet.aspx" class="product-img corner">
+                                            <span class="fullbox-img boximg-in"><img class="hideo" src="assets/images/product-img-1.jpg" alt="" /></span>
+                                            </a>
+                                        <div class="product-content">
+                                            <h4 class="product-name"><a href="san-pham-chi-tiet.aspx">Bộ bé gái 8 ri</a></h4>
+                                            <div class="pro-code">Mã: DBBT01</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="product-box text-center">
+                                        <a href="san-pham-chi-tiet.aspx" class="product-img corner">
+                                            <span class="fullbox-img boximg-in"><img class="hideo" src="assets/images/product-img-1.jpg" alt="" /></span>
+                                            </a>
+                                        <div class="product-content">
+                                            <h4 class="product-name"><a href="san-pham-chi-tiet.aspx">Bộ bé gái 8 ri</a></h4>
+                                            <div class="pro-code">Mã: DBBT01</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="product-box text-center">
+                                        <a href="san-pham-chi-tiet.aspx" class="product-img corner">
+                                            <span class="fullbox-img boximg-in"><img class="hideo" src="assets/images/product-img-1.jpg" alt="" /></span>
+                                            </a>
+                                        <div class="product-content">
+                                            <h4 class="product-name"><a href="san-pham-chi-tiet.aspx">Bộ bé gái 8 ri</a></h4>
+                                            <div class="pro-code">Mã: DBBT01</div>
+                                        </div>
+                                    </div>
+                                </li>
+                    </ul>
+
+                    <div id="slider-prev" class="btn-slider"></div>
+                    <div id="slider-next" class="btn-slider"></div>
+                </div>
+                <asp:ContentPlaceHolder ID="cphRight" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="colMain" class="pa-right">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <div id="mobileAside">
+                    
+                        <h4 class="title-c">Sản phẩm cùng loại</h4>
+                    <div class="wrapper-inpro">
+                    <div id="jcarouselPro" class="jcarousel-wrapper">
+                        <div class="jcarousel">
+                        </div>
+                        <a href="#" class="prev jcarousel-prev navigation-btn btn-a"><span class="fa fa-chevron-left corner"></span></a>
+                        <a href="#" class="next jcarousel-next navigation-btn btn-a"><span class="fa fa-chevron-right corner"></span></a>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="clr"></div>
+        </div>
+
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphMenuMobile" runat="Server">
+    <asp:ContentPlaceHolder ID="cphMenuMobile" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cphPopup" runat="Server">
+    <asp:ContentPlaceHolder ID="cphPopup" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+

@@ -1,0 +1,120 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/site-sub.master" AutoEventWireup="true" CodeFile="site-support.master.cs" Inherits="site_support" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphSite" runat="Server">
+    <asp:ContentPlaceHolder ID="cphSite" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphAside" runat="Server">
+    <h4 class="title-d text-uppercase">Hỗ trợ khách hàng</h4>
+    <ul class="footer-list">
+        <li>
+            <a href="#">
+                <span class="icon-a">
+                    <img src="assets/images/icon-f-1.png" />
+                </span>
+                Câu hỏi thường gặp  
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon-a">
+                    <img src="assets/images/icon-f-2.png" />
+                </span>
+                Các bước đặt hàng                                                 
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon-a">
+                    <img src="assets/images/icon-f-3.png" />
+                </span>
+                Chính sách giao hàng
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon-a">
+                    <img src="assets/images/icon-f-4.png" />
+                </span>
+                Quy định đổi trả
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon-a">
+                    <img src="assets/images/icon-f-5.png" />
+                </span>
+                Thông tin về chúng tôi
+            </a>
+        </li>
+    </ul>
+    <asp:ContentPlaceHolder ID="cphAside" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="cphMenuMobile" runat="Server">
+    <div id="mobileRight" class="mobile-panel mobilep-right">
+        <div class="close-menu"><a href="#mobileRight" class="glyphicon glyphicon-remove-circle">close</a></div>
+        <div class="menu-in">
+            <div class="menu-mobile">
+
+                <h4 class="title-c text-uppercase">Hỗ trợ khách hàng</h4>
+                <ul class="footer-list">
+                    <li>
+                        <a href="#">
+                            <span class="icon-a">
+                                <img src="assets/images/icon-f-1.png" />
+                            </span>
+                            Câu hỏi thường gặp  
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon-a">
+                                <img src="assets/images/icon-f-2.png" />
+                            </span>
+                            Các bước đặt hàng                                                 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon-a">
+                                <img src="assets/images/icon-f-3.png" />
+                            </span>
+                            Chính sách giao hàng
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon-a">
+                                <img src="assets/images/icon-f-4.png" />
+                            </span>
+                            Quy định đổi trả
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon-a">
+                                <img src="assets/images/icon-f-5.png" />
+                            </span>
+                            Thông tin về chúng tôi
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="cphMenuMobile" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="cphPopup" runat="Server">
+    <asp:ContentPlaceHolder ID="cphPopup" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+

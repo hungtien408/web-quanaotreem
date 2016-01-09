@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/site.master" AutoEventWireup="true" CodeFile="site-account.master.cs" Inherits="site_account" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="container">
+        <div id="site">
+            <a id="A1" href="~/" runat="server" class="home"><span class="fa fa-home"></span></a>&raquo;
+            <asp:ContentPlaceHolder ID="cphSite" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <div class="wrapper-main">
+            <div id="colAside" class="w180">
+                <div class="box-asibar">
+                    <h2 class="title-d">Tài khoản</h2>
+                    <ul class="menunav-product list-about">
+                        <li><a href="quan-ly-tai-khoan.aspx">Quản lý tài khoản</a></li>
+                        <li><a href="thong-tin-tai-khoan.aspx">Thông tin tài khoản</a></li>
+                        <li><a href="doi-mat-khau.aspx">Đổi mật khẩu</a></li>
+                        <li><a href="kiem-tra-don-hang.aspx">Kiểm tra đơn hàng</a></li>
+                    </ul>
+                </div>
+                <asp:ContentPlaceHolder ID="cphAside" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="colMain" class="pa-left content-ac">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="clr"></div>
+        </div>
+
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphMenuMobile" runat="Server">
+    <div id="mobileRight" class="mobile-panel mobilep-right mobile-bg">
+        <div class="close-menu"><a href="#mobileRight" class="glyphicon glyphicon-remove-circle"></a></div>
+        <div class="menu-in">
+            <div id="productNav" class="menu-mobile">
+                <h2 id="titlemo" class="title-d mbp10">Tài khoản</h2>
+                <ul class="menunav-product list-account">
+                    <li><a href="quan-ly-tai-khoan.aspx"><span class="glyphicon glyphicon-chevron-right icon-left"></span>Quản lý tài khoản</a></li>
+                    <li><a href="thong-tin-tai-khoan.aspx"><span class="glyphicon glyphicon-chevron-right icon-left"></span>Thông tin tài khoản</a></li>
+                    <li><a href="doi-mat-khau.aspx"><span class="glyphicon glyphicon-chevron-right icon-left"></span>Đổi mật khẩu</a></li>
+                    <li><a href="kiem-tra-don-hang.aspx"><span class="glyphicon glyphicon-chevron-right icon-left"></span>Kiểm tra đơn hàng</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="cphMenuMobile" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cphPopup" runat="Server">
+    <asp:ContentPlaceHolder ID="cphPopup" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+

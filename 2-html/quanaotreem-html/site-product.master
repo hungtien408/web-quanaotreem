@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/site-sub.master" AutoEventWireup="true" CodeFile="site-product.master.cs" Inherits="site_product" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphSite" Runat="Server">
+            <asp:ContentPlaceHolder ID="cphSite" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphAside" Runat="Server">
+                <h4 class="title-a"><a href="#" class="text-uppercase"><span class="iconl fa fa-play"></span>Mẫu hot thị trường</a></h4>
+                <h4 class="title-a"><a href="#" class="text-uppercase"><span class="iconl fa fa-play"></span>Mẫu mới</a></h4>
+                <h4 class="title-b tit-line text-uppercase"><span class="iconl fa fa-play"></span>Quần áo bé trai</h4>
+                <ul class="menu-list">
+                    <li><a href="#">Đồ bộ</a></li>
+                    <li><a href="#">Áo thun</a></li>
+                    <li><a href="#">Quần ngắn</a></li>
+                    <li><a href="#">Áo sơ mi</a></li>
+                    <li><a href="#">Quần dài</a></li>
+                    <li><a href="#">Áo khoác</a></li>
+                </ul>
+                <h4 class="title-b tit-line text-uppercase"><span class="iconl fa fa-play"></span>Quần áo bé gái</h4>
+                <ul class="menu-list">
+                    <li><a href="#">Đồ bộ</a></li>
+                    <li><a href="#">Áo thun</a></li>
+                    <li><a href="#">Quần ngắn</a></li>
+                    <li><a href="#">Áo sơ mi</a></li>
+                    <li><a href="#">Quần dài</a></li>
+                    <li><a href="#">Áo khoác</a></li>
+                </ul>
+                <h4 class="title-b tit-line text-uppercase"><span class="iconl fa fa-play"></span>Kiểu dáng</h4>
+                <div class="wrap-check">
+                    <asp:CheckBoxList ID="CheckBoxList1" CssClass="menu-check" runat="server">
+                        <asp:ListItem>Cotton 100%</asp:ListItem>
+                        <asp:ListItem>Thun</asp:ListItem>
+                        <asp:ListItem>Quần ngắn</asp:ListItem>
+                        <asp:ListItem>Áo sơ mi</asp:ListItem>
+                        <asp:ListItem>Quần dài</asp:ListItem>
+                        <asp:ListItem>Áo khoác</asp:ListItem>
+                    </asp:CheckBoxList>
+                </div>
+                <h4 class="title-b tit-line text-uppercase"><span class="iconl fa fa-play"></span>Chất liệu</h4>
+                <div class="wrap-check">
+                    <asp:CheckBoxList ID="CheckBoxList2" CssClass="menu-check" runat="server">
+                        <asp:ListItem>Đồ bộ</asp:ListItem>
+                        <asp:ListItem>Áo thun</asp:ListItem>
+                        <asp:ListItem>Quần ngắn</asp:ListItem>
+                        <asp:ListItem>Áo sơ mi</asp:ListItem>
+                        <asp:ListItem>Quần dài</asp:ListItem>
+                        <asp:ListItem>Áo khoác</asp:ListItem>
+                    </asp:CheckBoxList>
+                </div>
+                <asp:ContentPlaceHolder ID="cphAside" runat="server">
+                </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="cphMenuMobile" Runat="Server">
+    <div id="mobileRight" class="mobile-panel mobilep-right">
+        <div class="close-menu"><a href="#mobileRight" class="glyphicon glyphicon-remove-circle">close</a></div>
+        <div class="menu-in">
+            <div class="menu-mobile">
+                <h4 class="title-a"><a href="#" class="text-uppercase"><span class="iconl fa fa-play"></span>Mẫu hot thị trường</a></h4>
+                <h4 class="title-a"><a href="#" class="text-uppercase"><span class="iconl fa fa-play"></span>Mẫu mới</a></h4>
+                <h4 class="title-b tit-line text-uppercase"><span class="iconl fa fa-play"></span>Quần áo bé trai</h4>
+                <ul class="menu-list">
+                    <li><a href="#">Đồ bộ</a></li>
+                    <li><a href="#">Áo thun</a></li>
+                    <li><a href="#">Quần ngắn</a></li>
+                    <li><a href="#">Áo sơ mi</a></li>
+                    <li><a href="#">Quần dài</a></li>
+                    <li><a href="#">Áo khoác</a></li>
+                </ul>
+                <h4 class="title-b tit-line text-uppercase"><span class="iconl fa fa-play"></span>Quần áo bé gái</h4>
+                <ul class="menu-list">
+                    <li><a href="#">Đồ bộ</a></li>
+                    <li><a href="#">Áo thun</a></li>
+                    <li><a href="#">Quần ngắn</a></li>
+                    <li><a href="#">Áo sơ mi</a></li>
+                    <li><a href="#">Quần dài</a></li>
+                    <li><a href="#">Áo khoác</a></li>
+                </ul>
+                <h4 class="title-b tit-line text-uppercase"><span class="iconl fa fa-play"></span>Kiểu dáng</h4>
+                <div class="wrap-check">
+                    <asp:CheckBoxList ID="CheckBoxList3" CssClass="menu-check" runat="server">
+                        <asp:ListItem>Cotton 100%</asp:ListItem>
+                        <asp:ListItem>Thun</asp:ListItem>
+                        <asp:ListItem>Quần ngắn</asp:ListItem>
+                        <asp:ListItem>Áo sơ mi</asp:ListItem>
+                        <asp:ListItem>Quần dài</asp:ListItem>
+                        <asp:ListItem>Áo khoác</asp:ListItem>
+                    </asp:CheckBoxList>
+                </div>
+                <h4 class="title-b tit-line text-uppercase"><span class="iconl fa fa-play"></span>Chất liệu</h4>
+                <div class="wrap-check">
+                    <asp:CheckBoxList ID="CheckBoxList4" CssClass="menu-check" runat="server">
+                        <asp:ListItem>Đồ bộ</asp:ListItem>
+                        <asp:ListItem>Áo thun</asp:ListItem>
+                        <asp:ListItem>Quần ngắn</asp:ListItem>
+                        <asp:ListItem>Áo sơ mi</asp:ListItem>
+                        <asp:ListItem>Quần dài</asp:ListItem>
+                        <asp:ListItem>Áo khoác</asp:ListItem>
+                    </asp:CheckBoxList>
+                </div>
+            </div>
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="cphMenuMobile" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="cphPopup" Runat="Server">
+    <asp:ContentPlaceHolder ID="cphPopup" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+

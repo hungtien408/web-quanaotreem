@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/site.master" AutoEventWireup="true" CodeFile="site-right.master.cs"
+    Inherits="site_right" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="container">
+        <div id="site">
+            <a id="A1" href="~/" runat="server" class="home"><span class="fa fa-home"></span>
+            </a>&raquo;
+            <asp:ContentPlaceHolder ID="cphSite" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="wrapper-main">
+            <div id="colAright">
+                <h4 class="title-c">
+                    Sản phẩm cùng loại</h4>
+                <div id="sliderList">
+                    <asp:ListView ID="lstProductSame" runat="server" DataSourceID="odsProductSame" EnableModelValidation="True">
+                        <ItemTemplate>
+                            <li>
+                                <div class="product-box text-center">
+                                    <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'
+                                        class="product-img corner"><span class="fullbox-img boximg-in">
+                                            <img class="hideo" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/" + Eval("ImageName") : "~/assets/images/product-img-1.jpg" %>'
+                                                runat="server" /></span> </a>
+                                    <div class="product-content">
+                                        <h4 class="product-name">
+                                            <a href='<%# progressTitle(Eval("ProductName")) + "-pci-" + Eval("CategoryID") + "-pi-" + Eval("ProductID") + ".aspx" %>'>
+                                                <%# Eval("ProductName") %></a></h4>
+                                        <div class="pro-code">
+                                            Mã:
+                                            <%# Eval("Tag") %></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ItemTemplate>
+                        <LayoutTemplate>
+                            <ul class="product-list">
+                                <li runat="server" id="itemPlaceholder"></li>
+                            </ul>
+                        </LayoutTemplate>
+                    </asp:ListView>
+                    <asp:ObjectDataSource ID="odsProductSame" runat="server" SelectMethod="ProductSameSelectAll"
+                        TypeName="TLLib.Product">
+                        <SelectParameters>
+                            <asp:Parameter DefaultValue="4" Name="RerultCount" Type="String" />
+                            <asp:QueryStringParameter DefaultValue="" Name="ProductID" QueryStringField="pi"
+                                Type="String" />
+                        </SelectParameters>
+                    </asp:ObjectDataSource>
+                    <div id="slider-prev" class="btn-slider">
+                    </div>
+                    <div id="slider-next" class="btn-slider">
+                    </div>
+                </div>
+                <asp:ContentPlaceHolder ID="cphRight" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="colMain" class="pa-right">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <div id="mobileAside">
+                    <h4 class="title-c">
+                        Sản phẩm cùng loại</h4>
+                    <div class="wrapper-inpro">
+                        <div id="jcarouselPro" class="jcarousel-wrapper">
+                            <div class="jcarousel">
+                            </div>
+                            <a href="#" class="prev jcarousel-prev navigation-btn btn-a"><span class="fa fa-chevron-left corner">
+                            </span></a><a href="#" class="next jcarousel-next navigation-btn btn-a"><span class="fa fa-chevron-right corner">
+                            </span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clr">
+            </div>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphMenuMobile" runat="Server">
+    <asp:ContentPlaceHolder ID="cphMenuMobile" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cphPopup" runat="Server">
+    <asp:ContentPlaceHolder ID="cphPopup" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

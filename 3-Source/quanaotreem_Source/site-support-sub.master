@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/site.master" AutoEventWireup="true" CodeFile="site-support-sub.master.cs"
+    Inherits="site_support_sub" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="container">
+        <div id="site">
+            <a id="A1" href="~/" runat="server" class="home"><span class="fa fa-home"></span>
+            </a>&raquo;
+            <asp:ContentPlaceHolder ID="cphSite" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="wrapper-main">
+            <div id="colAright">
+                <h4 class="title-d">
+                    Các tư vấn khác</h4>
+                <asp:ListView ID="lstTuVan" runat="server" DataSourceID="odsTuVan" EnableModelValidation="True">
+                    <ItemTemplate>
+                        <div class="col-xs-12 element-item">
+                            <div class="box-sup">
+                                <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tv-" + Eval("ArticleID") + ".aspx" %>'
+                                    class="sup-img">
+                                    <img id="Img1" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/article/" + Eval("ImageName") : "~/assets/images/img-1.jpg" %>'
+                                        runat="server" />
+                                </a>
+                                <h3 class="sup-name">
+                                    <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tv-" + Eval("ArticleID") + ".aspx" %>'>
+                                        <%# Eval("ArticleTitle") %></a>
+                                </h3>
+                                <div class="desciption">
+                                    <%# TLLib.Common.SplitSummary(Eval("Description").ToString(), 120) %>
+                                </div>
+                                <div class="more-detail">
+                                    <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tv-" + Eval("ArticleID") + ".aspx" %>'>
+                                        Xem chi tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                    <LayoutTemplate>
+                        <div id="supprortAside" class="support-aside row tb-last" data-num="4">
+                            <span runat="server" id="itemPlaceholder" />
+                        </div>
+                    </LayoutTemplate>
+                </asp:ListView>
+                <asp:ObjectDataSource ID="odsTuVan" runat="server" SelectMethod="ArticleSelectAll"
+                    TypeName="TLLib.Article">
+                    <SelectParameters>
+                        <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
+                        <asp:Parameter DefaultValue="4" Name="EndRowIndex" Type="String" />
+                        <asp:Parameter Name="Keyword" Type="String" />
+                        <asp:Parameter Name="ArticleTitle" Type="String" />
+                        <asp:Parameter Name="Description" Type="String" />
+                        <asp:Parameter DefaultValue="10" Name="ArticleCategoryID" Type="String" />
+                        <asp:Parameter Name="Tag" Type="String" />
+                        <asp:Parameter Name="IsShowOnHomePage" Type="String" />
+                        <asp:Parameter Name="IsHot" Type="String" />
+                        <asp:Parameter Name="IsNew" Type="String" />
+                        <asp:Parameter Name="FromDate" Type="String" />
+                        <asp:Parameter Name="ToDate" Type="String" />
+                        <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                        <asp:Parameter Name="Priority" Type="String" />
+                        <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                    </SelectParameters>
+                </asp:ObjectDataSource>
+            </div>
+            <div id="colMain" class="pa-right">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <div id="mobileAside">
+                    <h4 class="title-d title-linet">
+                        Các tư vấn khác</h4>
+                    <div id="supportMobile" class="support-tb wrap-support row tb-last" data-num="4">
+                    </div>
+                </div>
+            </div>
+            <div class="clr">
+            </div>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphMenuMobile" runat="Server">
+    <asp:ContentPlaceHolder ID="cphMenuMobile" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cphPopup" runat="Server">
+    <asp:ContentPlaceHolder ID="cphPopup" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
